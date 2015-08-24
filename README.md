@@ -35,5 +35,7 @@ Run the index.html to use the iterator. Questions 2 is included in the index.htm
 
 The question 3 is included in the question-3.html.
 
+[You can also check out the working iterator on the browser.](http://codesush.github.io/iterator-javascript/)
+
 ### Tests
 Could not get to writing unit tests for the iterator on time.

@@ -1,17 +1,17 @@
 
 // Iterator class constructor
 function Iterator(){
-	this.position = 0;					// position(property) - Current position in the list
+	this.position = 0;	// position(property) - Current position in the list
 	this.listSize = 0;
 	this.data = [];
 	this.append = append;
 	this.tag = tag;
-	this.prev = prev;						// prev(function) - Moves the iterator one spot before and returns the new value.
-	this.next = next;						// next(function) - Moves the iterator one spot and returns the new value.
-	this.hasNext = hasNext;			// hasNext(function) - Returns true if not the end of list, else returns false
-	this.current = current;			// current(function) - Returns the current value in the list
-	this.reverse = reverse;			// reverse(function) - Reverses the list
-	this.length = length;				
+	this.prev = prev;	// prev(function) - Moves the iterator one spot before and returns the new value.
+	this.next = next;	// next(function) - Moves the iterator one spot and returns the new value.
+	this.hasNext = hasNext;    // hasNext(function) - Returns true if not the end of list, else returns false
+	this.current = current;    // current(function) - Returns the current value in the list
+	this.reverse = reverse;    // reverse(function) - Reverses the list
+	this.length = length;	
 }
 
 // append(function)
@@ -60,14 +60,14 @@ function hasNext(){
 
 // current(function)
 // Returns the current value in the list
-function current(){
+function current() {
 	return this.data[this.position];
 }
 
 // tag(function)
 // Sets a tag on the list with the current value and returns a function
 // Returns the value that was set using closure when the returned function is invoked
-function tag(){
+function tag() {
 	var currentTag = this.current();
 	return function(){
 			return currentTag;
@@ -85,7 +85,6 @@ function reverse(){
 
 	this.position = this.data.indexOf(currentValue);
 	return this.data;
-
 }
 
 
@@ -98,10 +97,5 @@ var cleanList = importList.trim().split(" ");
 //Initialize a new List Iterator
 var dataList = new Iterator();
 
+//Load the cleaned array into the data list
 dataList.append(cleanList);
-
-console.log(dataList); 
-
-
-
-

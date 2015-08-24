@@ -23,7 +23,7 @@ This method will return the current value that is pointed by the iterator.
 This method will return a function. When tag is invoked it will store the current value and return a function. When this returned function is invoked anytime, the tag value that was set will be returned.
 
 ###### reverse()
-This method will reverse the array. The current value will stay is the same even after the array is reversed.
+This method will reverse the array. The current value will stay the same even after the array is reversed.
 Eg:-
  ```sh
     1 2 3 4 5 6     => current value: 4 

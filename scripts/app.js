@@ -43,6 +43,7 @@ function next(){
 // prev(function)
 // Returns the new value in the list by moving the iterator one position to the left
 // The position is decremented by 1
+// Created to make it easy to move back on the list
 function prev(){
 	if(this.position > 0){
 		return this.data[--this.position];

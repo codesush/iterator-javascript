@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Iterator</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles/style.css" type='text/css'>
+</head>
+<body>
+	<div class="section">
+	 1 2 3 4 5 6
+	</div>
+
+	<div class="section">
+	 6 5 4 3 2 1
+	</div>
+
+	<div class="seperator">
+		<p>Above this line are the 2 DIVs with class ".section" from question 2.</p>
+	</div>
+
+	<div class="content">
+		<label for="controls" id="display">Data will display here</label>
+		<label id="micro-display" class="hide"></label>
+		<div class="controls">
+			<input type="button" id="show-data" value="Show Data" />
+			<input type="button" id="prev" value="Prev" />
+			<input type="button" id="next" value="Next" />
+			<input type="button" id="has-next" value="hasNext" />
+			<input type="button" id="current" value="Current" />
+			<input type="button" id="tag" value="Tag" />
+			<input type="button" id="get-tag" value="Get Tag" />
+			<input type="button" id="reverse" value="Reverse" />
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="scripts/app.js"></script>
+	<script>
+	// This script loads the DOM elements and adds click events
+	// to the buttons.
+	(function(){	
+		var setTag 	 = 0,
+		 display  = document.getElementById("display"),
+		 mdisplay = document.getElementById("micro-display"),
+		 showData = document.getElementById("show-data"),
+		 next 		= document.getElementById("next"),
+		 prev 		= document.getElementById("prev"),
+		 hasNext  = document.getElementById("has-next"),
+		 current  = document.getElementById("current"),
+		 tag 		 	= document.getElementById("tag"),
+		 getTag 	= document.getElementById("get-tag"),
+		 reverse  = document.getElementById("reverse");
+
+		showData.addEventListener("click", function(){
+			display.innerHTML = dataList.data;
+		});
+
+		next.addEventListener("click", function(){
+			display.innerHTML = dataList.next();
+		});
+
+		prev.addEventListener("click", function(){
+			display.innerHTML = dataList.prev();
+		});
+
+		hasNext.addEventListener("click", function(){
+			display.innerHTML = dataList.hasNext();
+		});
+
+		current.addEventListener("click", function(){
+			display.innerHTML = "Current :- " + dataList.current();
+		});
+
+		tag.addEventListener("click", function(){
+		  setTag = dataList.tag();
+			display.innerHTML = "Tag set at: " + dataList.current();
+			mdisplay.style.display = "block";
+			mdisplay.innerHTML = "Tag: " + dataList.current();
+		});
+
+		getTag.addEventListener("click", function(){
+			display.innerHTML = "Tag is: " + setTag();
+		});
+
+		reverse.addEventListener("click", function(){
+			display.innerHTML = dataList.reverse();
+		});
+
+	})();
+
+	</script>
+</body>
+</html>

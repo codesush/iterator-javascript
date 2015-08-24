@@ -1,0 +1,57 @@
+/* Simple CSS styles */
+
+body{
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+.hide{
+	display: none;
+}
+
+.content{
+	margin: 0 auto;
+  max-width: 650px;
+  padding: 1em 0 .5em 0;
+  margin-top: 4em;
+  background-color: #ecf0f1;
+  border: 1px solid #4d4d4d;
+  border-radius: 4px;
+}
+
+.seperator{
+	max-height: 8em;
+	border: 3px dotted blue;
+	border-left: 0;
+	border-right: 0;
+	background: #3498db;
+}
+
+.controls{
+	max-width: 455px;
+	margin: 0 auto;
+
+}
+
+#display{
+	margin-bottom: 10px;
+	max-width: 650px;
+	font-size: 21px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#micro-display{
+	margin-bottom: 30px;
+	max-width: 650px;
+	font-size: 14px;
+	color: #e67e22;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+input[type="button"]{
+	min-width: 7em;
+}
